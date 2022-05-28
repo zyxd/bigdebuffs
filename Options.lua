@@ -38,6 +38,7 @@ local order = {
     buffs_other = 7,
     roots = 8,
     buffs_speed_boost = 9,
+    slows = 10
 }
 local SpellNames = {}
 local SpellIcons = {}
@@ -1238,6 +1239,13 @@ function BigDebuffs:SetupOptions()
                                 desc = L["Show Speed Boosts on the unit frames"],
                                 order = 10,
                             },
+                            slows = {
+                                type = "toggle",
+                                width = "normal",
+                                name = L["slows"],
+                                desc = L["Show Slow Debuffs on the unit frames"],
+                                order = 11,
+                            },
                         },
                     },
                 }
@@ -1403,6 +1411,13 @@ function BigDebuffs:SetupOptions()
                                 desc = L["Show Speed Boosts on nameplates"],
                                 order = 10,
                             },
+                            slows = {
+                                type = "toggle",
+                                width = "normal",
+                                name = L["slows"],
+                                desc = L["Show Slow Debuffs on nameplates"],
+                                order = 11,
+                            }
                         },
                     },
                     enemyAnchor = {
@@ -1971,6 +1986,16 @@ function BigDebuffs:SetupOptions()
                 max = 100,
                 step = 1,
                 order = 19,
+            },
+            slows = {
+                type = "range",
+                width = "double",
+                name = L["slows"],
+                desc = L["Higher priority spells will take precedence regardless of duration"],
+                min = 1,
+                max = 100,
+                step = 1,
+                order = 20,
             },
         },
     }

@@ -104,6 +104,7 @@ local defaults = {
             debuffs_offensive = true,
             roots = true,
             buffs_speed_boost = true,
+            slows = false
         },
         nameplates = {
             enabled = true,
@@ -138,6 +139,7 @@ local defaults = {
             debuffs_offensive = true,
             roots = true,
             buffs_speed_boost = true,
+            slows = false
         },
         priority = {
             immunities = 80,
@@ -151,6 +153,7 @@ local defaults = {
             roots = 20,
             special = 19,
             buffs_speed_boost = 10,
+            slows = 18
         },
         spells = {},
     }

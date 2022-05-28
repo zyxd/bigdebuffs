@@ -10,6 +10,7 @@ local CROWD_CONTROL = "cc"
 local ROOT = "roots"
 local IMMUNITY = "immunities"
 local IMMUNITY_SPELL = "immunities_spells"
+local SLOW = "slows"
 
 addon.Units = {
     "player",
@@ -308,6 +309,10 @@ addon.Spells = {
     [5384] = { type = BUFF_DEFENSIVE }, -- Feign Death
     [24394] = { type = CROWD_CONTROL }, -- Intimidation
     [19577] = { type = BUFF_OFFENSIVE, parent = 24394 }, -- Intimidation (Buff)
+    [5116] = { type = SLOW }, -- Concussive Shot
+    [2974] = { type = SLOW }, -- Wing Clip
+        [14267] = { parent = 2974 },
+        [14268] = { parent = 2974 },
 
 
     -- Druid
